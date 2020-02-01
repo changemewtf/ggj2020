@@ -1,29 +1,8 @@
 fileFormatVersion: 2
-guid: ce4b3ba2a2c454f9da180b238b1c17b5
+guid: 325d2e70466734f4f84a0767f1511b02
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable:
-  - first:
-      74: -3100628101864396295
-    second: Sphere|SphereAction
-  - first:
-      74: 8322223561345680864
-    second: OuterPoop|InnerPoopAction
-  - first:
-      74: -8769094390480159417
-    second: OuterPoop|KeyAction
-  - first:
-      74: 3646547098215536392
-    second: OuterPoop|OuterPoopAction
-  - first:
-      74: 3879407321138520463
-    second: InnerPoop|InnerPoopAction
-  - first:
-      74: -649454248939361244
-    second: InnerPoop|KeyAction
-  - first:
-      74: -438257728387716995
-    second: InnerPoop|OuterPoopAction
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -88,8 +67,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 47e3012ed9aa741f18f04acf9b9c83f5
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -109,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
