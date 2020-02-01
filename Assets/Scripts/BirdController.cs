@@ -20,7 +20,8 @@ public class BirdController : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            rb.AddForce(transform.up * thrust);
+            Debug.Log("SPACE BAR DEPRESSED!");
+            rb.AddForce(transform.up * thrust, ForceMode.Impulse);
         }
     }
 }
