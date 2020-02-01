@@ -1,56 +1,8 @@
 fileFormatVersion: 2
-guid: 401ee217daf5546aca87499bf7dc75c6
+guid: 9f9640b7917a54382b3a29cfa772ee99
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable:
-  - first:
-      74: -5295234818953329759
-    second: APPLE TREE MAIN TRUNK|Cylinder.001Action
-  - first:
-      74: -4177063676778305473
-    second: APPLE TREE MAIN TRUNK|Cylinder.002Action
-  - first:
-      74: 8535557601129144772
-    second: APPLE TREE MAIN TRUNK|CylinderAction
-  - first:
-      74: 3185505284780801011
-    second: APPLE TREE MAIN TRUNK|IcosphereAction
-  - first:
-      74: 331492192678296687
-    second: APPLE TREE TOP|Cylinder.001Action
-  - first:
-      74: -6376637023437761855
-    second: APPLE TREE TOP|Cylinder.002Action
-  - first:
-      74: -4964282767841839950
-    second: APPLE TREE TOP|CylinderAction
-  - first:
-      74: 1596571094145644211
-    second: APPLE TREE TOP|IcosphereAction
-  - first:
-      74: 6421152396781218364
-    second: APPLE TREE BRANCH 1|Cylinder.001Action
-  - first:
-      74: 3744088977330713935
-    second: APPLE TREE BRANCH 1|Cylinder.002Action
-  - first:
-      74: -3393806628628016325
-    second: APPLE TREE BRANCH 1|CylinderAction
-  - first:
-      74: -9152214822005446965
-    second: APPLE TREE BRANCH 1|IcosphereAction
-  - first:
-      74: 6278369863323423649
-    second: APPLE TREE BRANCH 2|Cylinder.001Action
-  - first:
-      74: 3440018560520039185
-    second: APPLE TREE BRANCH 2|Cylinder.002Action
-  - first:
-      74: 164864260453619699
-    second: APPLE TREE BRANCH 2|CylinderAction
-  - first:
-      74: -7602195782350582158
-    second: APPLE TREE BRANCH 2|IcosphereAction
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -135,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
