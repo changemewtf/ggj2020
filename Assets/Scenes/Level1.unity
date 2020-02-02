@@ -531,7 +531,7 @@ MonoBehaviour:
   startingFood: 0.5
   hungerWarningPercent: 0.2
   overfullWarningPercent: 0.9
-  pooCapacity: 25
+  pooCapacity: 35
   pooWarningPercent: 0.8
   baseFoodPerSec: 0.02
   foodToPooRate: 1
@@ -2282,8 +2282,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237699457}
-  m_LocalRotation: {x: 0.14843307, y: 0.02247164, z: -0.0033737817, w: 0.9886614}
-  m_LocalPosition: {x: -4.3747067, y: 13.078124, z: -14.985029}
+  m_LocalRotation: {x: 0.14843309, y: 0.022471622, z: -0.0033737782, w: 0.9886614}
+  m_LocalPosition: {x: -4.374707, y: 13.078124, z: -14.985029}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 293415347}
@@ -3060,8 +3060,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663421186}
-  m_LocalRotation: {x: 0.14843307, y: 0.02247164, z: -0.0033737817, w: 0.9886614}
-  m_LocalPosition: {x: -4.3747067, y: 13.078124, z: -14.985029}
+  m_LocalRotation: {x: 0.14843309, y: 0.022471622, z: -0.0033737782, w: 0.9886614}
+  m_LocalPosition: {x: -4.374707, y: 13.078124, z: -14.985029}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 961631773}
