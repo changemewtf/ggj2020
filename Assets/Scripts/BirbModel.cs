@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class BirbModel : MonoBehaviour
 {
@@ -101,6 +103,7 @@ public class BirbModel : MonoBehaviour
         tummyShake.StopShake();
         colonBar.ResetColor();
         pooShake.StopShake();
+         SceneManager.LoadScene("GameOver");
         if(foodTotal<=0f && pooTotal >= pooCapacity)
         {
             print("You died full of poop");
