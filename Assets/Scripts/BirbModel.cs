@@ -38,6 +38,7 @@ public class BirbModel : MonoBehaviour
     public Button resetButton;
 
     public AudioSource PoopFalling;
+    public AudioSource WingFlap;
 
     public Animator RainbowAnimation;
 
@@ -119,6 +120,7 @@ public class BirbModel : MonoBehaviour
         {
             print("Why did you die?");
         }
+        
 
     }
 
@@ -208,6 +210,7 @@ public class BirbModel : MonoBehaviour
                 heartRateVelocity+=heartRatePerFlap;
                 // RainbowAnimation.Play("Flap");
                 RainbowAnimation.SetTrigger("Flap");
+                WingFlap.Play();
             }
             
             UpdateHeartRate();

@@ -9,7 +9,11 @@ public class PoopCollisionController : MonoBehaviour
     public GameObject pigeon;
     private int contactCount = 0;
     public Vector3 pigeon_last_position;
-
+    // private PoopGenerato
+    public GameObject AvoTree;
+    public GameObject AppleTree;
+    public GameObject OrangeTree;
+    public GameObject PearTree;
     
 
     // Start is called before the first frame update
@@ -18,18 +22,23 @@ public class PoopCollisionController : MonoBehaviour
         plane = GameObject.Find("Plane");
         pigeon = GameObject.Find("Pigeon");
         gameObject.transform.position = pigeon.transform.position;
+        contactCount = 0;
+        // poog = pigeon.GetComponent<PoopGenerator>();
         
     }
-
     void OnCollisionEnter(Collision collision)
     {   
         contactCount++;
+        // Debug.Log(contactCount);
         
-        if(contactCount < 2) {
+        if(contactCount > 0) {
+
+            Debug.Log(collision.gameObject.name);
             if(collision.gameObject.name == "Plane") {
-                // Debug.Log(poop.GetComponent<Animation>());
-                gameObject.GetComponent<Animation>().Play("Sphere|SphereAction");
-                DestroyObjectDelayed();
+                //TODO: make the animation work.
+                // Debug.Log("ground hit!");
+                Instantiate(pickTree(), gameObject.transform.position, Quaternion.identity);
+                Destroy(gameObject, 2);
             }
         }
         // Debug.Log(contactCount);
@@ -42,14 +51,18 @@ public class PoopCollisionController : MonoBehaviour
     {
         pigeon_last_position = pigeon.transform.position;
         
-        // Debug.Log(pigeon_last_position);
-        
     }
 
+    private GameObject pickTree(){
+        int tree = Random.Range(1, 5);
+        Debug.Log("pick a tree");
+        Debug.Log(tree);
+        if(tree==1) {return AppleTree;}
+        else if(tree==2){return AvoTree;}
+        else if(tree==3){return OrangeTree;}
+        else{return PearTree;}
 
-    void DestroyObjectDelayed()
-    {
-        // Kills the game object in 5 seconds after loading the object
-        Destroy(gameObject, 2);
+        return AppleTree;
+        
     }
 }

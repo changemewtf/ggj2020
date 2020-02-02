@@ -10,7 +10,8 @@ public class PoopGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            
+            bird_transform = gameObject.transform;
+
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class PoopGenerator : MonoBehaviour
     }
 
     public void MakePoop() {
+        
         Instantiate(poop, bird_transform.position, Quaternion.identity);
     }
 

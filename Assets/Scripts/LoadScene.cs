@@ -7,6 +7,6 @@ public class LoadScene : MonoBehaviour
     {
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         SceneManager.LoadScene(sceneToLoad);
-               Debug.Log ("buttonpress");
+        // Debug.Log ("buttonpress");
     }
 }
