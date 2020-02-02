@@ -50,6 +50,11 @@ public class BirdController : MonoBehaviour
         {
             Debug.Log("Picked up a " + collid.gameObject.name);
             Destroy(collid.gameObject);
+        } else if (collid.gameObject.name == "MissDetector")
+        {
+            Debug.Log("Missed a " + collid.gameObject.transform.parent.gameObject.name);
+            Destroy(collid.gameObject.transform.parent.gameObject);
+
         }
     }
 }
