@@ -41,6 +41,7 @@ public class BirbModel : MonoBehaviour
 
     public AudioSource PoopFalling;
     public AudioSource WingFlap;
+    public AudioSource FoodEaten;
     //  public AudioSource Poosplat;
     // Audio must also be added to Birb Model,  and sound must also be in main camera and set in the birb model script
 
@@ -84,14 +85,24 @@ public class BirbModel : MonoBehaviour
     {
         //print("EAT!");
         foodTotal +=foodPerMeal;
+        FoodEaten.Play();
     }
 
     void Poo()
     {
         //print("Poo!");
-        pooTotal = 0;
-        PoopFalling.Play();
-        poog.MakePoop();
+        if(pooTotal>pooCapacity*.2)
+        {
+            print("you have enough poop");
+            pooTotal = 0;
+            PoopFalling.Play();
+            poog.MakePoop();
+        } 
+        else
+        {
+   print("you Don't have enough poop");
+        }
+
     }
 
     void Die()
