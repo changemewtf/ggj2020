@@ -39,6 +39,8 @@ public class BirbModel : MonoBehaviour
 
     public AudioSource PoopFalling;
     public AudioSource WingFlap;
+    //  public AudioSource Poosplat;
+    // Audio must also be added to Birb Model,  and sound must also be in main camera and set in the birb model script
 
     public Animator RainbowAnimation;
 
@@ -203,13 +205,20 @@ public class BirbModel : MonoBehaviour
 
     void Update()
     {   
+
         if(alive)
         {
+            // Debug.Log ("Alive");
             if (Input.GetKeyDown("space"))
             {
                 heartRateVelocity+=heartRatePerFlap;
                 // RainbowAnimation.Play("Flap");
                 RainbowAnimation.SetTrigger("Flap");
+                Debug.Log ("SpaceBar");
+                // Wind.Play();
+                // Why does this one work when others don't?
+                // PoopFalling.Play();
+                // Poosplat.Play();
                 WingFlap.Play();
             }
             
