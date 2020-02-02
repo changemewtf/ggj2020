@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BirbModel : MonoBehaviour
 {
+    public GameObject TheBird;
+
     private BarController heartBar;
     public float recoverPerSecond;
     public float heartRatePerFlap;
@@ -14,12 +16,18 @@ public class BirbModel : MonoBehaviour
     private float heartRateAcceleration;
 
     private BarController tummyBar;
+    private ShakeBehavior tummyShake;
     private float foodTotal;
     public float foodCapacity;
+    public float startingFood;
+    public float hungerWarningPercent;
+    public float overfullWarningPercent;
 
     private BarController colonBar;
+    private ShakeBehavior pooShake;
     private float pooTotal;
     public float pooCapacity;
+    public float pooWarningPercent;
     
     public float baseFoodPerSec;
     public float foodToPooRate;
@@ -29,27 +37,31 @@ public class BirbModel : MonoBehaviour
     public Button pooButton;
     public Button resetButton;
 
+    public AudioSource PoopFalling;
+
+    public Animator RainbowAnimation;
+
     private bool alive;
     private bool exploded;
     // public float heartRate;
     // Start is called before the first frame update
+    private PoopGenerator poog;
+
     void Start()
     {
-        heartBar = transform.Find("HeartBar").GetComponent<BarController>();
-        tummyBar = transform.Find("TummyBar").GetComponent<BarController>();
-        colonBar = transform.Find("ColonBar").GetComponent<BarController>();
-        // heartRate = 0.0f;
-        // heartRateVelocity = 0.0f;
-        // heartRateAcceleration = 0.0f;
-        // pooTotal = 0f;
-        // foodTotal = foodCapacity;
-        // alive = true;
-        // exploded =false;
+        poog = TheBird.GetComponent<PoopGenerator>();
+
+        heartBar = GameObject.Find("HeartBar").GetComponent<BarController>();
+        tummyBar = GameObject.Find("TummyBar").GetComponent<BarController>();
+        tummyShake = GameObject.Find("TummyBar").GetComponent<ShakeBehavior>();
+        colonBar = GameObject.Find("ColonBar").GetComponent<BarController>();
+        pooShake = GameObject.Find("ColonBar").GetComponent<ShakeBehavior>();
+       
         Reset();
-        eatButton.onClick.AddListener(Eat);
-        
-        pooButton.onClick.AddListener(Poo);
-        resetButton.onClick.AddListener(Reset);
+
+        //eatButton.onClick.AddListener(Eat);
+        //pooButton.onClick.AddListener(Poo);
+        //resetButton.onClick.AddListener(Reset);
         
     }
     void Reset()
@@ -58,7 +70,7 @@ public class BirbModel : MonoBehaviour
         heartRateVelocity = 0.0f;
         heartRateAcceleration = 0.0f;
         pooTotal = 0f;
-        foodTotal = foodCapacity;
+        foodTotal = foodCapacity*startingFood;
         alive = true;
         exploded =false;
 
@@ -68,17 +80,24 @@ public class BirbModel : MonoBehaviour
         //print("EAT!");
         foodTotal +=foodPerMeal;
     }
+
     void Poo()
     {
         //print("Poo!");
-        pooTotal=0;
+        pooTotal = 0;
+        PoopFalling.Play();
+        poog.MakePoop();
     }
+
     void Die()
     {
         alive=false;
         heartRate =0;
         heartBar.SetSize(heartRate);
-        
+        tummyBar.ResetColor();
+        tummyShake.StopShake();
+        colonBar.ResetColor();
+        pooShake.StopShake();
         if(foodTotal<=0f && pooTotal >= pooCapacity)
         {
             print("You died full of poop");
@@ -102,6 +121,7 @@ public class BirbModel : MonoBehaviour
         }
 
     }
+
     void UpdateHeartRate()
     {
         if(heartRate > 0f)
@@ -130,6 +150,7 @@ public class BirbModel : MonoBehaviour
             heartRateVelocity =0f;
         }
     }
+
     void UpdateDigestion()
     {
         float actualFoodPerSec = baseFoodPerSec+heartRate*heartRateToFood;
@@ -143,17 +164,41 @@ public class BirbModel : MonoBehaviour
         tummyBar.SetSize(foodTotal/foodCapacity);
         colonBar.SetSize(pooTotal/pooCapacity);
 
-
         if(foodTotal<=0f || foodTotal >=foodCapacity)
         {
             Die();
         }
-        else if(pooTotal >= pooCapacity)
+        else if(foodTotal < hungerWarningPercent*foodCapacity || foodTotal >overfullWarningPercent*foodCapacity)
+        {
+            tummyShake.TriggerShake();
+            tummyBar.WarnColor();
+            
+        }
+         
+        else
+        {
+            tummyBar.ResetColor();
+            tummyShake.StopShake();
+        }
+        
+        if(pooTotal >= pooCapacity)
         {
            
             Poo();
         }
+        else if(pooTotal > pooWarningPercent*pooCapacity)
+        {
+            pooShake.TriggerShake();
+            colonBar.WarnColor();
+        }
+        else
+        {
+            colonBar.ResetColor();
+            pooShake.StopShake();
+        }
+        
     }
+
     void Update()
     {   
         if(alive)
@@ -161,11 +206,12 @@ public class BirbModel : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 heartRateVelocity+=heartRatePerFlap;
+                // RainbowAnimation.Play("Flap");
+                RainbowAnimation.SetTrigger("Flap");
             }
             
             UpdateHeartRate();
             UpdateDigestion();
         }
-        
     }
 }

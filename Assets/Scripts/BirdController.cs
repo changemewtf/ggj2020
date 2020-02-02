@@ -7,14 +7,15 @@ public class BirdController : MonoBehaviour
     public float FlapThrust = 30.0f;
     public float ForwardThrust = 20.0f;
 
-    private bool flapping;
     private Rigidbody rb;
+    private Animator anim;
+    private bool flapping;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hi I'm a birt");
         rb = GetComponent<Rigidbody>();
+        //anim = GetComponent<Animator>();
         flapping = false;
     }
 
@@ -27,6 +28,7 @@ public class BirdController : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             flapping = true;
+            //anim.SetTrigger("Flap");
         }
     }
 
@@ -39,6 +41,15 @@ public class BirdController : MonoBehaviour
         if (flapping) {
             rb.AddForce(transform.up * FlapThrust, ForceMode.Impulse);
             flapping = false;
+        }
+    }
+
+    void OnTriggerEnter(Collider collid)
+    {
+        if (collid.gameObject.CompareTag("Pickupabble"))
+        {
+            Debug.Log("Picked up a " + collid.gameObject.name);
+            Destroy(collid.gameObject);
         }
     }
 }
