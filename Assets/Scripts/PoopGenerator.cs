@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PoopGenerator : MonoBehaviour
 {
-    public bool random;
     public Transform bird_transform;
-    public GameObject OldPoop;
+    public GameObject poop;
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +17,14 @@ public class PoopGenerator : MonoBehaviour
     void Update()
     {
         float rgn_poop = Random.Range(0.0f, 50.0f);
-        if (random && rgn_poop < 1.0f)
-        {
+        if(rgn_poop < 1.0f) {
             MakePoop();
         }
+
     }
 
-    public void MakePoop()
-    {
-        Instantiate(OldPoop, bird_transform.position, Quaternion.identity);
+    public void MakePoop() {
+        Instantiate(poop, bird_transform.position, Quaternion.identity);
     }
+
 }

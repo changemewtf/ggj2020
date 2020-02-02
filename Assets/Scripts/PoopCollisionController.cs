@@ -5,19 +5,19 @@ using UnityEngine;
 public class PoopCollisionController : MonoBehaviour
 {
     // init
-    public GameObject poop;
     public GameObject plane;
     public GameObject pigeon;
     private int contactCount = 0;
     public Vector3 pigeon_last_position;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
         plane = GameObject.Find("Plane");
         pigeon = GameObject.Find("Pigeon");
-        poop = GameObject.Find("OldPoop");
-        poop.transform.position = pigeon_last_position;
+        gameObject.transform.position = pigeon.transform.position;
         
     }
 
@@ -26,10 +26,10 @@ public class PoopCollisionController : MonoBehaviour
         contactCount++;
         
         if(contactCount < 2) {
-            if(collision.gameObject.name == "") {
-                // poop.transform.localPosition = last_position;
+            if(collision.gameObject.name == "Plane") {
                 // Debug.Log(poop.GetComponent<Animation>());
-                poop.GetComponent<Animation>().Play("Sphere|SphereAction");
+                gameObject.GetComponent<Animation>().Play("Sphere|SphereAction");
+                DestroyObjectDelayed();
             }
         }
         // Debug.Log(contactCount);
@@ -41,8 +41,15 @@ public class PoopCollisionController : MonoBehaviour
     void Update()
     {
         pigeon_last_position = pigeon.transform.position;
-
+        
         // Debug.Log(pigeon_last_position);
         
+    }
+
+
+    void DestroyObjectDelayed()
+    {
+        // Kills the game object in 5 seconds after loading the object
+        Destroy(gameObject, 2);
     }
 }

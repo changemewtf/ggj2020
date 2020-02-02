@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bird_transform: {fileID: 1409582756}
-  OldPoop: {fileID: 3326231475016274244, guid: 9b7495eed51f448dfa493ee4408c2487, type: 3}
+  poop: {fileID: 3326231475016274244, guid: 9b7495eed51f448dfa493ee4408c2487, type: 3}
 --- !u!1001 &1537994432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -557,6 +557,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2923317684461271157, guid: d5cc52a035e8d4161bd3912523b073ba,
+        type: 3}
+      propertyPath: TheBird
+      value: 
+      objectReference: {fileID: 1409582749}
     - target: {fileID: 6561350523395022531, guid: d5cc52a035e8d4161bd3912523b073ba,
         type: 3}
       propertyPath: m_Name

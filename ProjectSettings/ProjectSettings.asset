@@ -646,10 +646,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 460ba831-9068-4deb-b870-4012ef5e743b
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: PoopingBird
+  organizationId: cwhuang_unity
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

@@ -28,7 +28,7 @@ public class BirdController : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             flapping = true;
-            //anim.SetTrigger("Flap");
+            anim.SetTrigger("Flap");
         }
     }
 
