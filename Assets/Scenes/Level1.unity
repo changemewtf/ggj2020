@@ -541,7 +541,7 @@ MonoBehaviour:
   resetButton: {fileID: 0}
   PoopFalling: {fileID: 293415345}
   WingFlap: {fileID: 804626866}
-  RainbowAnimation: {fileID: 0}
+  RainbowAnimation: {fileID: 293415349}
 --- !u!224 &293415347
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1258,7 +1258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bird_transform: {fileID: 787308121}
-  poop: {fileID: 0}
+  poop: {fileID: 1578779133108269232, guid: 1439579a3e10e294cb4381b827b32e6d, type: 3}
 --- !u!65 &787308118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2275,9 +2275,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237699457}
-  m_LocalRotation: {x: 0.12614185, y: 0.0000000082203755, z: -0.0000000010456299,
-    w: 0.99201226}
-  m_LocalPosition: {x: 0.00000019153022, y: 7.4770665, z: -11.556495}
+  m_LocalRotation: {x: 0.12614186, y: -0.00000000822032, z: 0.0000000010449229, w: 0.99201226}
+  m_LocalPosition: {x: -0.00000019152318, y: 7.4770665, z: -11.556495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 293415347}
@@ -3054,9 +3053,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663421186}
-  m_LocalRotation: {x: 0.12614185, y: 0.0000000082203755, z: -0.0000000010456299,
-    w: 0.99201226}
-  m_LocalPosition: {x: 0.00000019153022, y: 7.4770665, z: -11.556495}
+  m_LocalRotation: {x: 0.12614186, y: -0.00000000822032, z: 0.0000000010449229, w: 0.99201226}
+  m_LocalPosition: {x: -0.00000019152318, y: 7.4770665, z: -11.556495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 961631773}
@@ -3151,7 +3149,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 745484e3956454b2fa06e4da3ced072a,
         type: 3}
       propertyPath: m_Name
-      value: Rainbow@Glide
+      value: Pigeon
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 745484e3956454b2fa06e4da3ced072a,
         type: 3}
