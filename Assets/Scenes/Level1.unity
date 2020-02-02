@@ -743,7 +743,7 @@ MonoBehaviour:
   pooWarningPercent: 0.8
   baseFoodPerSec: 0.02
   foodToPooRate: 1
-  foodPerMeal: 15
+  foodPerMeal: 20
   eatButton: {fileID: 0}
   pooButton: {fileID: 0}
   resetButton: {fileID: 0}
@@ -763,8 +763,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 938304637}
-  - {fileID: 2003264927}
   - {fileID: 568733430}
+  - {fileID: 2003264927}
   - {fileID: 813607183}
   - {fileID: 1280397878}
   m_Father: {fileID: 1237699460}
@@ -1759,7 +1759,7 @@ Transform:
   - {fileID: 361751678}
   - {fileID: 1447648550}
   m_Father: {fileID: 293415347}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &568733431
 MonoBehaviour:
@@ -1786,7 +1786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 087b9d81d368d4aae98696f5d3b768b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopEmoji: {fileID: 0}
+  poopEmoji: {fileID: 2003264928}
   defaultColor: {r: 0, g: 1, b: 0.16104317, a: 1}
   warnColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &599488509 stripped
@@ -2613,7 +2613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 087b9d81d368d4aae98696f5d3b768b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopEmoji: {fileID: 2003264928}
+  poopEmoji: {fileID: 0}
   defaultColor: {r: 0.8962264, g: 0.38267708, b: 0, a: 1}
   warnColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &961631772
@@ -6188,7 +6188,7 @@ Transform:
   m_LocalScale: {x: 0.32128, y: 0.32128, z: 0.32128}
   m_Children: []
   m_Father: {fileID: 293415347}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2003264928
 MonoBehaviour:

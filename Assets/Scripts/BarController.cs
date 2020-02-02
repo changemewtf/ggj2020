@@ -40,6 +40,7 @@ public class BarController : MonoBehaviour
         if (poopEmoji)
         {
             int oneToTen = (int)(sizeNormalized * 10);
+            //Debug.Log(name + " One to ten: " + oneToTen);
             poopEmoji.PercentStep = oneToTen;
         }
         bar.transform.localScale =  new Vector3(sizeNormalized,1f);
