@@ -217,7 +217,6 @@ public class BirbModel : MonoBehaviour
                 heartRateVelocity+=heartRatePerFlap;
                 // RainbowAnimation.Play("Flap");
                 RainbowAnimation.SetTrigger("Flap");
-                Debug.Log ("SpaceBar");
                 // Wind.Play();
                 // Why does this one work when others don't?
                 // PoopFalling.Play();

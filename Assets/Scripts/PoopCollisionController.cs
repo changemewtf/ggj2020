@@ -24,7 +24,7 @@ public class PoopCollisionController : MonoBehaviour
         pigeon = GameObject.Find("Rainbow@Glide");
         gameObject.transform.position = pigeon.transform.position;
         TreePosition = new Vector3(pigeon.transform.position.x, 0.0f, pigeon.transform.position.z);
-        Debug.Log(TreePosition);
+        //Debug.Log(TreePosition);
         contactCount = 0;
         // poog = pigeon.GetComponent<PoopGenerator>();
         
@@ -62,8 +62,5 @@ public class PoopCollisionController : MonoBehaviour
         else if(tree==2){return AvoTree;}
         else if(tree==3){return OrangeTree;}
         else{return PearTree;}
-
-        return AppleTree;
-        
     }
 }
