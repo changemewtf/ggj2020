@@ -6,6 +6,7 @@ public class BirdController : MonoBehaviour
 {
     public float FlapThrust = 30.0f;
     public float ForwardThrust = 20.0f;
+    public BirbModel Model;
 
     private Rigidbody rb;
     private Animator anim;
@@ -48,8 +49,9 @@ public class BirdController : MonoBehaviour
     {
         if (collid.gameObject.CompareTag("Pickupabble"))
         {
-            Debug.Log("Picked up a " + collid.gameObject.name);
+            Debug.Log("Ate a " + collid.gameObject.name);
             Destroy(collid.gameObject);
+            Model.Eat();
         } else if (collid.gameObject.name == "MissDetector")
         {
             Debug.Log("Missed a " + collid.gameObject.transform.parent.gameObject.name);
