@@ -3167,7 +3167,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 745484e3956454b2fa06e4da3ced072a,
         type: 3}
       propertyPath: m_Name
-      value: Rainbow@Glide
+      value: Pigeon
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 745484e3956454b2fa06e4da3ced072a,
         type: 3}

@@ -25,7 +25,6 @@ public class PoopGenerator : MonoBehaviour
     }
 
     public void MakePoop() {
-        
         Instantiate(poop, bird_transform.position, Quaternion.identity);
     }
 
