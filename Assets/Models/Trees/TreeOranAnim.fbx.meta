@@ -30,7 +30,19 @@ ModelImporter:
   - first:
       74: -6258445976200936100
     second: TREE BRANCHES|TREE TRUNK ACTION
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: -3846018093981099296, guid: da154391f2bac44fcb423c9f616c9d36,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tree Trunk
+    second: {fileID: -7581447147719945762, guid: 0c031002cee85471c87e4120bd95faaf,
+      type: 3}
   materials:
     importMaterials: 1
     materialName: 0
