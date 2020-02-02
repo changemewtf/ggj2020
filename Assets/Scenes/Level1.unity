@@ -408,7 +408,6 @@ GameObject:
   - component: {fileID: 293415348}
   - component: {fileID: 293415345}
   - component: {fileID: 293415349}
-  - component: {fileID: 293415350}
   m_Layer: 0
   m_Name: BirbModel
   m_TagString: Untagged
@@ -680,23 +679,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &293415350
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293415344}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 4781951162920444690, guid: a43bd143c705b4898a55dd289f63c929,
-    type: 3}
-  m_Animations:
-  - {fileID: 4781951162920444690, guid: a43bd143c705b4898a55dd289f63c929, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &355583173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,8 +2275,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237699457}
-  m_LocalRotation: {x: 0.12614186, y: -0.000000008220322, z: 0.0000000010449356, w: 0.99201226}
-  m_LocalPosition: {x: -0.00000019152328, y: 7.4770665, z: -11.556495}
+  m_LocalRotation: {x: 0.12614185, y: 0.0000000082203755, z: -0.0000000010456299,
+    w: 0.99201226}
+  m_LocalPosition: {x: 0.00000019153022, y: 7.4770665, z: -11.556495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 293415347}
@@ -3071,8 +3054,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663421186}
-  m_LocalRotation: {x: 0.12614186, y: -0.000000008220322, z: 0.0000000010449356, w: 0.99201226}
-  m_LocalPosition: {x: -0.00000019152328, y: 7.4770665, z: -11.556495}
+  m_LocalRotation: {x: 0.12614185, y: 0.0000000082203755, z: -0.0000000010456299,
+    w: 0.99201226}
+  m_LocalPosition: {x: 0.00000019153022, y: 7.4770665, z: -11.556495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 961631773}
