@@ -37,11 +37,9 @@ public class BarController : MonoBehaviour
     }
     public void SetSize(float sizeNormalized)
     {
-        Debug.Log("Size normalized: " + sizeNormalized);
         if (poopEmoji)
         {
             int oneToTen = (int)(sizeNormalized * 10);
-            Debug.Log("Size int: " + oneToTen);
             poopEmoji.PercentStep = oneToTen;
         }
         bar.transform.localScale =  new Vector3(sizeNormalized,1f);
