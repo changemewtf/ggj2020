@@ -6,22 +6,22 @@ using Cinemachine;
 public class FollowUpdater : MonoBehaviour
 {
     public List<GameObject> FollowTargets;
+    public CinemachineVirtualCamera Cam;
 
     private GameObject Target;
-    private CinemachineVirtualCamera Cam;
 
     // Start is called before the first frame update
     void Start()
     {
         Pop();
-        Cam = GetComponent<CinemachineVirtualCamera>();
+        //Cam = GetComponent<CinemachineVirtualCamera>();
     }
 
     void Pop()
     {
         Target = FollowTargets[0];
-        FollowTargets.RemoveAt(0);
         Cam.LookAt = Target.transform;
+        FollowTargets.RemoveAt(0);
     }
 
     // Update is called once per frame

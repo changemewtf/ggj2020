@@ -2562,6 +2562,7 @@ MonoBehaviour:
   - {fileID: 542336964}
   - {fileID: 44408818}
   - {fileID: 1536499361}
+  Cam: {fileID: 1663421187}
 --- !u!1001 &1786305347
 PrefabInstance:
   m_ObjectHideFlags: 0
