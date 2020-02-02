@@ -40,7 +40,7 @@ public class PoopCollisionController : MonoBehaviour
         if(contactCount > 0) {
 
             Debug.Log(collision.gameObject.name);
-            if(collision.gameObject.name == "Plane") {
+            if(collision.gameObject.name == "Terrain_2") {
                 //TODO: make the animation work.
                 // Debug.Log("ground hit!");
 
