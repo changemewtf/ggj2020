@@ -43,7 +43,7 @@ public class BirbModel : MonoBehaviour
     public AudioSource WingFlap;
     public AudioSource FoodEaten;
     //  public AudioSource Poosplat;
-    // Audio must also be added to Birb Model,  and sound must also be in main camera and set in the birb model script
+    // Audio must also be added to Birb Model,  and sound must also be in main scene and set in the birb model script
 
     public Animator RainbowAnimation;
 
