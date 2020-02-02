@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a0ed3134f2454fea45dd73e6660ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poop: {fileID: 0}
   plane: {fileID: 0}
   pigeon: {fileID: 6561350523395022531, guid: d5cc52a035e8d4161bd3912523b073ba, type: 3}
   pigeon_last_position: {x: 0, y: 0, z: 0}
@@ -348,7 +349,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3984742236277806961}
   - component: {fileID: 7956089987411255819}
-  - component: {fileID: 7926875562615347197}
   m_Layer: 0
   m_Name: PoopCam
   m_TagString: Untagged
@@ -414,14 +414,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7926875562615347197
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8288575861578279271}
-  m_Enabled: 1
 --- !u!1 &8814036630187537825
 GameObject:
   m_ObjectHideFlags: 0
