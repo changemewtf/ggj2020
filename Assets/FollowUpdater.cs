@@ -19,6 +19,10 @@ public class FollowUpdater : MonoBehaviour
 
     void Pop()
     {
+        if (FollowTargets.Count < 1)
+        {
+            return;
+        }
         Target = FollowTargets[0];
         Cam.LookAt = Target.transform;
         FollowTargets.RemoveAt(0);
