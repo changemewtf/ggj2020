@@ -75,7 +75,7 @@ public class BirbModel : MonoBehaviour
         exploded =false;
 
     }
-    void Eat()
+    public void Eat()
     {
         //print("EAT!");
         foodTotal +=foodPerMeal;
