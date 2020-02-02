@@ -8,6 +8,7 @@ public class BarController : MonoBehaviour
     private Transform bar;
     private Transform fill;
     private SpriteRenderer fillRenderer;
+    public GraphicMeterController poopEmoji;
     public Color defaultColor;
     public Color warnColor;
     void Start()
@@ -19,7 +20,6 @@ public class BarController : MonoBehaviour
         defaultColor = fillRenderer.color;
         // print("WARN COLOR: "+warnColor);
         ResetColor();
-
         // SetSize(0.4f);
     }
     public void SetColor(Color c)
@@ -37,6 +37,13 @@ public class BarController : MonoBehaviour
     }
     public void SetSize(float sizeNormalized)
     {
+        Debug.Log("Size normalized: " + sizeNormalized);
+        if (poopEmoji)
+        {
+            int oneToTen = (int)(sizeNormalized * 10);
+            Debug.Log("Size int: " + oneToTen);
+            poopEmoji.PercentStep = oneToTen;
+        }
         bar.transform.localScale =  new Vector3(sizeNormalized,1f);
         // bar.localScale = new Vector3(sizeNormalized,1f);
     }
