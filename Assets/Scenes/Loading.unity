@@ -761,7 +761,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604594949}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -798,8 +798,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 2166111c9a07d473bb29faa7eb1ae995, type: 3}
-        m_MethodName: set_name
+      - m_Target: {fileID: 604594954}
+        m_MethodName: LoadIt
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -816,7 +816,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604594949}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -940,7 +940,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 5a9f36ab48c7d49029bc3a965e8d3d55, type: 2}
+      objectReference: {fileID: 9100000, guid: f23cc31e11bbf4b36bbe6f9644ec5e17, type: 2}
     - target: {fileID: -6057140222963153312, guid: a43bd143c705b4898a55dd289f63c929,
         type: 3}
       propertyPath: m_Enabled
