@@ -5,6 +5,7 @@ using UnityEngine;
 public class PoopCollisionController : MonoBehaviour
 {
     // init
+    public GameObject poop;
     public GameObject plane;
     public GameObject pigeon;
     private int contactCount = 0;
@@ -20,8 +21,10 @@ public class PoopCollisionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        plane = GameObject.Find("Terrain_2");
-        pigeon = GameObject.Find("Rainbow@Glide");
+        plane = GameObject.Find("Plane");
+        pigeon = GameObject.Find("Pigeon");
+        // plane = GameObject.Find("Terrain_2");
+        // pigeon = GameObject.Find("Rainbow@Glide");
         gameObject.transform.position = pigeon.transform.position;
         TreePosition = new Vector3(pigeon.transform.position.x, 0.0f, pigeon.transform.position.z);
         //Debug.Log(TreePosition);
@@ -42,7 +45,7 @@ public class PoopCollisionController : MonoBehaviour
                 // Debug.Log("ground hit!");
 
                 Instantiate(pickTree(), TreePosition, Quaternion.identity);
-                Destroy(gameObject, 2);
+                Destroy(gameObject, 1);
             }
             else {
                 Destroy(gameObject);
