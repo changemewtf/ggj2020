@@ -24,25 +24,28 @@ public class PoopCollisionController : MonoBehaviour
         // plane = GameObject.Find("Plane");
         // pigeon = GameObject.Find("Pigeon");
         plane = GameObject.Find("Terrain_2");
+        Debug.Log(plane);
         pigeon = GameObject.Find("Rainbow@Glide");
         gameObject.transform.position = pigeon.transform.position;
         TreePosition = new Vector3(pigeon.transform.position.x, 0.0f, pigeon.transform.position.z);
-        //Debug.Log(TreePosition);
+        Debug.Log(TreePosition);
         contactCount = 0;
         // poog = pigeon.GetComponent<PoopGenerator>();
         
     }
+
+    void Update(){ }
     void OnCollisionEnter(Collision collision)
     {   
         contactCount++;
-        // Debug.Log(contactCount);
+        Debug.Log(contactCount);
         
         if(contactCount > 0) {
 
-            Debug.Log(collision.gameObject.name);
+            // Debug.Log(collision.gameObject.name);
             if(collision.gameObject.name == "Terrain_2") {
                 //TODO: make the animation work.
-                // Debug.Log("ground hit!");
+                Debug.Log("ground hit!");
 
                 Instantiate(pickTree(), TreePosition, Quaternion.identity);
                 Destroy(gameObject, 1);

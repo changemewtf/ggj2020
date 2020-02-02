@@ -176,7 +176,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578779133108269232}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: ce4b3ba2a2c454f9da180b238b1c17b5, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 1
@@ -222,8 +222,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.023710284, y: 0.02512686, z: 0.04543571}
-  m_Center: {x: 0.000016446307, y: 0.0002703987, z: 0.012717863}
+  m_Size: {x: 0.0249563, y: 0.030573037, z: 0.046611443}
+  m_Center: {x: -0.0006065619, y: -0.0004993085, z: 0.012129998}
 --- !u!54 &1578779133108269233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -17.7}
+  m_AnchoredPosition: {x: 0, y: -17.699997}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4447035177215317508

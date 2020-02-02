@@ -223,7 +223,18 @@ public class BirbModel : MonoBehaviour
         if(alive)
         {
             // Debug.Log ("Alive");
-            if (Input.GetKeyDown("space"))
+            if (Input.GetKeyDown("space") )
+            {
+                heartRateVelocity+=heartRatePerFlap;
+                // RainbowAnimation.Play("Flap");
+                RainbowAnimation.SetTrigger("Flap");
+                // Wind.Play();
+                // Why does this one work when others don't?
+                // PoopFalling.Play();
+                // Poosplat.Play();
+                WingFlap.Play();
+            }
+               if (Input.GetMouseButtonDown(0))
             {
                 heartRateVelocity+=heartRatePerFlap;
                 // RainbowAnimation.Play("Flap");

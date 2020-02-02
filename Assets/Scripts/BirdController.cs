@@ -34,6 +34,12 @@ public class BirdController : MonoBehaviour
             // WingFlap.Play(0);
             // anim.SetTrigger("Flap");
         }
+         if (Input.GetMouseButtonDown(0))
+            {
+                   flapping = true;
+            // WingFlap.Play(0);
+            // anim.SetTrigger("Flap");
+        }
     }
 
     // Physics updates go in FixedUpdate() instead of Update()!
